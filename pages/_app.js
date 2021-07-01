@@ -1,7 +1,8 @@
-import '../styles/globals.css'
+import styles from '../styles/global.scss';
+import {StylesProvider} from '@material-ui/core';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({Component, pageProps}) {
+  return <StylesProvider injectFirst><Component {...pageProps} /></StylesProvider>;
 }
 
-export default MyApp
+export default MyApp;
